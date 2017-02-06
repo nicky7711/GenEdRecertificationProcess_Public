@@ -1,0 +1,143 @@
+﻿/**
+  * Table Of Contents
+  * 1.) Common
+  * 2.) Nav menu
+  * 3.) Login Page
+  */
+
+/**=================
+  * Common
+  *=================
+  */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+    min-height: 100%;
+    position: relative;
+    font-family: 'Open Sans', serif;
+}
+
+body {
+    font-family: 'Open Sans', serif;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.control-label {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-family: 'Open Sans', serif;
+}
+
+.page-header {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.card {
+    width: 98%;
+    height: 95%;
+    padding-bottom: 10px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    background-color: white;
+}
+
+/**=================
+  * Nav menu
+  *=================
+  */
+
+#theNavMenu {
+    background-color: #a41e35;
+    border-color: #a41e35;
+    width: 100%;
+}
+
+#theNavbarBrand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    font-size: 16px;
+}
+
+/**=================
+  * Login Page
+  *=================
+  */
+body.login {
+    background: url(https://fim.temple.edu/idp/images/hex-pattern-bg.png);
+    background-repeat: repeat;
+    padding-top: 0px;
+}
+
+.wrapper {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.form-signin {
+    max-width: 500px;
+    padding: 3px 35px 3px 35px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+    .form-signin .form-control {
+        position: relative;
+        font-size: 16px;
+        height: auto;
+        padding: 10px;
+    }
+
+.input-text {
+    margin-bottom: 15px;
+}
+
+.input-password {
+    margin-bottom: 15px;
+}
+
+#btnLogin {
+    background-color: #a41e35;
+    border-color: #a41e35;
+    width: 100%;
+}
+
+/**=================
+  * Admin Tables
+  *=================
+  */
+.GridPager {
+    font-size: 12pt;
+}
+
+.GridPager a, .GridPager span {
+    display: block;
+    height: 20px;
+    width: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.GridPager a {
+    background-color: #f5f5f5;
+    color: #a41e35;
+}
+
+.GridPager span {
+    background-color: #A1DCF2;
+    color: #000;
+}
