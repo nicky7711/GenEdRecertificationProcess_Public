@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63D8A25C-D20B-4954-B7D2-086EAA0A5192}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GenEdRecertification_v2._0</RootNamespace>
+    <AssemblyName>GenEdRecertification-v2.0</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminCompletedReviews.aspx" />
+    <Content Include="AdminCreateArea.aspx" />
+    <Content Include="AdminCreateCourse.aspx" />
+    <Content Include="AdminCreateCoursePackage.aspx" />
+    <Content Include="AdminCreateDepartment.aspx" />
+    <Content Include="AdminCreatePortfolioDocument.aspx" />
+    <Content Include="AdminCreateStatus.aspx" />
+    <Content Include="AdminCreateSubject.aspx" />
+    <Content Include="AdminCreateUser.aspx" />
+    <Content Include="AdminHome.aspx" />
+    <Content Include="AdminRubricQuestionnaire.aspx" />
+    <Content Include="AdminViewCoursePackage.aspx" />
+    <Content Include="bin\GenEdRecertification-v2.0.dll" />
+    <Content Include="bin\GenEdRecertification-v2.0.pdb" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="CourseCoordinatorHome.aspx" />
+    <Content Include="CourseCoordinatorRubricQuestionnaire.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\temple_university_logo.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="ReviewerHome.aspx" />
+    <Content Include="ReviewerRubricQuestionnaire.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="CourseCoordinator.Master" />
+    <Content Include="packages.config" />
+    <Content Include="Reviewer.Master" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCompletedReviews.aspx.cs">
+      <DependentUpon>AdminCompletedReviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCompletedReviews.aspx.designer.cs">
+      <DependentUpon>AdminCompletedReviews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateArea.aspx.cs">
+      <DependentUpon>AdminCreateArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateArea.aspx.designer.cs">
+      <DependentUpon>AdminCreateArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateCourse.aspx.cs">
+      <DependentUpon>AdminCreateCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateCourse.aspx.designer.cs">
+      <DependentUpon>AdminCreateCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateCoursePackage.aspx.cs">
+      <DependentUpon>AdminCreateCoursePackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateCoursePackage.aspx.designer.cs">
+      <DependentUpon>AdminCreateCoursePackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateDepartment.aspx.cs">
+      <DependentUpon>AdminCreateDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateDepartment.aspx.designer.cs">
+      <DependentUpon>AdminCreateDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreatePortfolioDocument.aspx.cs">
+      <DependentUpon>AdminCreatePortfolioDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreatePortfolioDocument.aspx.designer.cs">
+      <DependentUpon>AdminCreatePortfolioDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateStatus.aspx.cs">
+      <DependentUpon>AdminCreateStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateStatus.aspx.designer.cs">
+      <DependentUpon>AdminCreateStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateSubject.aspx.cs">
+      <DependentUpon>AdminCreateSubject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateSubject.aspx.designer.cs">
+      <DependentUpon>AdminCreateSubject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateUser.aspx.cs">
+      <DependentUpon>AdminCreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateUser.aspx.designer.cs">
+      <DependentUpon>AdminCreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRubricQuestionnaire.aspx.cs">
+      <DependentUpon>AdminRubricQuestionnaire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminRubricQuestionnaire.aspx.designer.cs">
+      <DependentUpon>AdminRubricQuestionnaire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViewCoursePackage.aspx.cs">
+      <DependentUpon>AdminViewCoursePackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminViewCoursePackage.aspx.designer.cs">
+      <DependentUpon>AdminViewCoursePackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseCoordinator.Master.cs">
+      <DependentUpon>CourseCoordinator.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseCoordinator.Master.designer.cs">
+      <DependentUpon>CourseCoordinator.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CourseCoordinatorHome.aspx.cs">
+      <DependentUpon>CourseCoordinatorHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseCoordinatorHome.aspx.designer.cs">
+      <DependentUpon>CourseCoordinatorHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseCoordinatorRubricQuestionnaire.aspx.cs">
+      <DependentUpon>CourseCoordinatorRubricQuestionnaire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseCoordinatorRubricQuestionnaire.aspx.designer.cs">
+      <DependentUpon>CourseCoordinatorRubricQuestionnaire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reviewer.Master.cs">
+      <DependentUpon>Reviewer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviewer.Master.designer.cs">
+      <DependentUpon>Reviewer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewerHome.aspx.cs">
+      <DependentUpon>ReviewerHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewerHome.aspx.designer.cs">
+      <DependentUpon>ReviewerHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewerRubricQuestionnaire.aspx.cs">
+      <DependentUpon>ReviewerRubricQuestionnaire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewerRubricQuestionnaire.aspx.designer.cs">
+      <DependentUpon>ReviewerRubricQuestionnaire.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Admin.Master" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GenEdRecertificationLibrary\GenEdRecertificationLibrary.csproj">
+      <Project>{98877577-5837-454b-8124-e6164a98c557}</Project>
+      <Name>GenEdRecertificationLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50574/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

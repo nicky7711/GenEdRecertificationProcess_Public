@@ -1,0 +1,43 @@
+﻿/*This css code is just for the formatting of the readme file, you can delete all present code here and replace with your own*/
+body
+{
+background: white;
+padding: 0px;
+}
+
+headline
+{
+position: absolute;
+top: 5px;
+left: 0px;
+}
+
+pendant
+{
+ position: absolute;
+ top: 80px;
+ left: 0px;
+ }
+
+.welcome
+{
+top:80px;
+padding: 3px;
+}
+
+tablelist
+{
+position:absolute;
+left:0px;
+top:190px;
+padding: 3px;
+}
+
+#container
+{
+    width:969px;
+    margin:auto;
+    position:relative;
+}
+
+

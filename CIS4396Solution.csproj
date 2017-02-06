@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A072AA48-5C3D-4C2E-A287-AAE0828FE676}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CIS4396Solution</RootNamespace>
+    <AssemblyName>CIS4396Solution</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="AdminCompletedReviews.aspx" />
+    <Content Include="AdminCreateArea.aspx" />
+    <Content Include="AdminCreateCourse.aspx" />
+    <Content Include="AdminCreateCoursePackage.aspx" />
+    <Content Include="AdminCreateDepartment.aspx" />
+    <Content Include="AdminCreatePortfolioDocument.aspx" />
+    <Content Include="AdminCreateSubject.aspx" />
+    <Content Include="AdminCreateUser.aspx" />
+    <Content Include="AdminEditPackage.aspx" />
+    <Content Include="AdminHome.aspx" />
+    <Content Include="AdminRubricQuestionnaire.aspx" />
+    <Content Include="AdminViewCoursePackage.aspx" />
+    <Content Include="AdminViewQuestionnaire.aspx" />
+    <Content Include="bin\CIS4396Solution.dll" />
+    <Content Include="bin\CIS4396Solution.pdb" />
+    <Content Include="bin\GenEdRecertificationLibrary.dll" />
+    <Content Include="bin\GenEdRecertificationLibrary.pdb" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.xml" />
+    <Content Include="bin\System.Web.Http.xml" />
+    <Content Include="CourseCoordinatorHome.aspx" />
+    <Content Include="CourseCoordinatorRubricQuestionnaire.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="format.css" />
+    <Content Include="GenEdRecertification-v2.0.csproj" />
+    <Content Include="GenEdRecertification-v2.0.csproj.user" />
+    <Content Include="GenEdRecertification-v2.0.sln" />
+    <Content Include="Global.asax" />
+    <Content Include="images\cs_logo1.jpg" />
+    <Content Include="images\Red_DiamondPattern.jpg" />
+    <Content Include="images\temple_BigT.png" />
+    <Content Include="images\temple_DotPattern.jpg" />
+    <Content Include="images\temple_positivecharge.jpg" />
+    <Content Include="images\temple_university_logo.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Release\GenEdRecertificationLibrary.dll" />
+    <Content Include="bin\CIS4396Solution.dll.config" />
+    <Content Include="images\New_ScreenShots.pdf" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="packages\bootstrap.3.3.6\bootstrap.3.3.6.nupkg" />
+    <Content Include="packages\bootstrap.3.3.6\content\Content\bootstrap-theme.css" />
+    <Content Include="packages\bootstrap.3.3.6\content\Content\bootstrap-theme.css.map" />
+    <Content Include="packages\bootstrap.3.3.6\content\Content\bootstrap-theme.min.css" />
+    <Content Include="packages\bootstrap.3.3.6\content\Content\bootstrap-theme.min.css.map" />
+    <Content Include="packages\bootstrap.3.3.6\content\Content\bootstrap.css" />
+    <Content Include="packages\bootstrap.3.3.6\content\Content\bootstrap.css.map" />
+    <Content Include="packages\bootstrap.3.3.6\content\Content\bootstrap.min.css" />
+    <Content Include="packages\bootstrap.3.3.6\content\Content\bootstrap.min.css.map" />
+    <Content Include="packages\bootstrap.3.3.6\content\Content\style.css" />
+    <Content Include="packages\bootstrap.3.3.6\content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages\bootstrap.3.3.6\content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="packages\bootstrap.3.3.6\content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="packages\bootstrap.3.3.6\content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="packages\bootstrap.3.3.6\content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="packages\bootstrap.3.3.6\content\Scripts\bootstrap.js" />
+    <Content Include="packages\bootstrap.3.3.6\content\Scripts\bootstrap.min.js" />
+    <Content Include="packages\bootstrap.3.3.6\content\Scripts\jquery-1.9.1.min.js" />
+    <Content Include="packages\FontAwesome.4.6.3\Content\Content\font-awesome.css" />
+    <Content Include="packages\FontAwesome.4.6.3\Content\Content\font-awesome.min.css" />
+    <Content Include="packages\FontAwesome.4.6.3\Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="packages\FontAwesome.4.6.3\Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="packages\FontAwesome.4.6.3\Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="packages\FontAwesome.4.6.3\Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="packages\FontAwesome.4.6.3\Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="packages\FontAwesome.4.6.3\Content\fonts\FontAwesome.otf" />
+    <Content Include="packages\FontAwesome.4.6.3\FontAwesome.4.6.3.nupkg" />
+    <Content Include="packages\FontAwesome.4.6.3\tools\install.ps1" />
+    <Content Include="packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1.js" />
+    <Content Include="packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1.min.js" />
+    <Content Include="packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1.min.map" />
+    <Content Include="packages\jQuery.1.9.1\jQuery.1.9.1.nupkg" />
+    <Content Include="packages\jQuery.1.9.1\Tools\common.ps1" />
+    <Content Include="packages\jQuery.1.9.1\Tools\install.ps1" />
+    <Content Include="packages\jQuery.1.9.1\Tools\uninstall.ps1" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\netcore45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\netcore45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.xml" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="readmefirst.aspx" />
+    <Content Include="ReviewerHome.aspx" />
+    <Content Include="ReviewerRubricQuestionnaire.aspx" />
+    <Content Include="ReviewerViewCoursePackage.aspx" />
+    <Content Include="Test Files\TestFile.txt" />
+    <Content Include="ViewPDF.aspx" />
+    <Content Include="Web References\WS_LDAPSearch\ldap_search.disco" />
+    <Content Include="Web References\WS_ProgramsAndDegrees\ProgramsAndDegrees.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCompletedReviews.aspx.cs">
+      <DependentUpon>AdminCompletedReviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCompletedReviews.aspx.designer.cs">
+      <DependentUpon>AdminCompletedReviews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateArea.aspx.cs">
+      <DependentUpon>AdminCreateArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateArea.aspx.designer.cs">
+      <DependentUpon>AdminCreateArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateCourse.aspx.cs">
+      <DependentUpon>AdminCreateCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateCourse.aspx.designer.cs">
+      <DependentUpon>AdminCreateCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateCoursePackage.aspx.cs">
+      <DependentUpon>AdminCreateCoursePackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateCoursePackage.aspx.designer.cs">
+      <DependentUpon>AdminCreateCoursePackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateDepartment.aspx.cs">
+      <DependentUpon>AdminCreateDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateDepartment.aspx.designer.cs">
+      <DependentUpon>AdminCreateDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreatePortfolioDocument.aspx.cs">
+      <DependentUpon>AdminCreatePortfolioDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreatePortfolioDocument.aspx.designer.cs">
+      <DependentUpon>AdminCreatePortfolioDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateSubject.aspx.cs">
+      <DependentUpon>AdminCreateSubject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateSubject.aspx.designer.cs">
+      <DependentUpon>AdminCreateSubject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateUser.aspx.cs">
+      <DependentUpon>AdminCreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateUser.aspx.designer.cs">
+      <DependentUpon>AdminCreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEditPackage.aspx.cs">
+      <DependentUpon>AdminEditPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminEditPackage.aspx.designer.cs">
+      <DependentUpon>AdminEditPackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRubricQuestionnaire.aspx.cs">
+      <DependentUpon>AdminRubricQuestionnaire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminRubricQuestionnaire.aspx.designer.cs">
+      <DependentUpon>AdminRubricQuestionnaire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViewCoursePackage.aspx.cs">
+      <DependentUpon>AdminViewCoursePackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminViewCoursePackage.aspx.designer.cs">
+      <DependentUpon>AdminViewCoursePackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViewQuestionnaire.aspx.cs">
+      <DependentUpon>AdminViewQuestionnaire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminViewQuestionnaire.aspx.designer.cs">
+      <DependentUpon>AdminViewQuestionnaire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="CourseCoordinator.Master.cs">
+      <DependentUpon>CourseCoordinator.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseCoordinator.Master.designer.cs">
+      <DependentUpon>CourseCoordinator.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CourseCoordinatorHome.aspx.cs">
+      <DependentUpon>CourseCoordinatorHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseCoordinatorHome.aspx.designer.cs">
+      <DependentUpon>CourseCoordinatorHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseCoordinatorRubricQuestionnaire.aspx.cs">
+      <DependentUpon>CourseCoordinatorRubricQuestionnaire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseCoordinatorRubricQuestionnaire.aspx.designer.cs">
+      <DependentUpon>CourseCoordinatorRubricQuestionnaire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorFile.cs" />
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Package.cs" />
+    <Compile Include="Portfolio.cs" />
+    <Compile Include="Questionnaire.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="readmefirst.aspx.cs">
+      <DependentUpon>readmefirst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="readmefirst.aspx.designer.cs">
+      <DependentUpon>readmefirst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reviewer.Master.cs">
+      <DependentUpon>Reviewer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviewer.Master.designer.cs">
+      <DependentUpon>Reviewer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewerHome.aspx.cs">
+      <DependentUpon>ReviewerHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewerHome.aspx.designer.cs">
+      <DependentUpon>ReviewerHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewerRubricQuestionnaire.aspx.cs">
+      <DependentUpon>ReviewerRubricQuestionnaire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewerRubricQuestionnaire.aspx.designer.cs">
+      <DependentUpon>ReviewerRubricQuestionnaire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewerViewCoursePackage.aspx.cs">
+      <DependentUpon>ReviewerViewCoursePackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewerViewCoursePackage.aspx.designer.cs">
+      <DependentUpon>ReviewerViewCoursePackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TempleUser.cs" />
+    <Compile Include="ViewPDF.aspx.cs">
+      <DependentUpon>ViewPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPDF.aspx.designer.cs">
+      <DependentUpon>ViewPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_LDAPSearch\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_ProgramsAndDegrees\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.Master" />
+    <Content Include="CourseCoordinator.Master" />
+    <Content Include="packages.config" />
+    <Content Include="Reviewer.Master" />
+    <Content Include="Web References\WS_LDAPSearch\ldap_search.wsdl" />
+    <Content Include="Web References\WS_LDAPSearch\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\WS_LDAPSearch\TempleLDAPEntry.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1-vsdoc.js" />
+    <None Include="packages\jQuery.1.9.1\Tools\jquery-1.9.1.intellisense.js" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.2.3\Microsoft.AspNet.WebApi.Client.5.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.5.2.3\Content\web.config.transform" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.5.2.3\Microsoft.AspNet.WebApi.Core.5.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\Microsoft.AspNet.WebApi.WebHost.5.2.3.nupkg" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\Newtonsoft.Json.6.0.8.nupkg" />
+    <Content Include="packages\Newtonsoft.Json.6.0.8\tools\install.ps1" />
+    <None Include="Properties\PublishProfiles\CIS4396F01.pubxml" />
+    <Content Include="Web References\WS_ProgramsAndDegrees\ProgramsAndDegrees.wsdl" />
+    <Content Include="Web References\WS_ProgramsAndDegrees\ProgramsAndDegreesEntry.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WS_ProgramsAndDegrees\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://preprod-wsw.temple.edu/programsanddegrees/ProgramsAndDegrees.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_ProgramsAndDegrees\</RelPath>
+      <UpdateFromURL>https://preprod-wsw.temple.edu/programsanddegrees/ProgramsAndDegrees.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CIS4396Solution_WS_ProgramsAndDegrees_ProgramsAndDegrees</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://preprod-wsw.temple.edu/ws_ldapsearch/ldap_search.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_LDAPSearch\</RelPath>
+      <UpdateFromURL>https://preprod-wsw.temple.edu/ws_ldapsearch/ldap_search.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CIS4396Solution_WS_LDAPSearch_LDAP_Search</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53231</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

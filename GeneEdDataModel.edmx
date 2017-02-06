@@ -1,0 +1,799 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GenEdDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="GenEdDataModelStoreContainer">
+          <EntitySet Name="AcademicYr" EntityType="GenEdDataModel.Store.AcademicYr" store:Type="Tables" store:Schema="dbo" store:Name="AcademicYr">
+            <DefiningQuery>SELECT 
+      [AcademicYr].[AcademicYrCd] AS [AcademicYrCd], 
+      [AcademicYr].[AcademicYrDesc] AS [AcademicYrDesc], 
+      [AcademicYr].[ActiveInd] AS [ActiveInd], 
+      [AcademicYr].[CreaetDt] AS [CreaetDt], 
+      [AcademicYr].[CreateUserNm] AS [CreateUserNm]
+      FROM [dbo].[AcademicYr] AS [AcademicYr]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Area" EntityType="GenEdDataModel.Store.Area" store:Type="Tables" store:Schema="dbo" store:Name="Area">
+            <DefiningQuery>SELECT 
+      [Area].[AreaCd] AS [AreaCd], 
+      [Area].[AreaNm] AS [AreaNm], 
+      [Area].[ActiveInd] AS [ActiveInd], 
+      [Area].[CreateDt] AS [CreateDt], 
+      [Area].[LastModDt] AS [LastModDt], 
+      [Area].[LastModUser] AS [LastModUser]
+      FROM [dbo].[Area] AS [Area]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Course" EntityType="GenEdDataModel.Store.Course" store:Type="Tables" store:Schema="dbo" store:Name="Course">
+            <DefiningQuery>SELECT 
+      [Course].[CourseId] AS [CourseId], 
+      [Course].[CourseTitle] AS [CourseTitle], 
+      [Course].[CourseNum] AS [CourseNum], 
+      [Course].[SubjectCd] AS [SubjectCd], 
+      [Course].[CourseSubjectNum] AS [CourseSubjectNum], 
+      [Course].[AreaCd] AS [AreaCd], 
+      [Course].[ActiveInd] AS [ActiveInd], 
+      [Course].[LastModDt] AS [LastModDt], 
+      [Course].[LastModUser] AS [LastModUser], 
+      [Course].[CreateDt] AS [CreateDt], 
+      [Course].[CreateUser] AS [CreateUser], 
+      [Course].[DeptId] AS [DeptId]
+      FROM [dbo].[Course] AS [Course]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Department" EntityType="GenEdDataModel.Store.Department" store:Type="Tables" store:Schema="dbo" store:Name="Department">
+            <DefiningQuery>SELECT 
+      [Department].[DeptId] AS [DeptId], 
+      [Department].[CollegeId] AS [CollegeId], 
+      [Department].[CollegeCd] AS [CollegeCd], 
+      [Department].[DeptNm] AS [DeptNm], 
+      [Department].[SubjectCd] AS [SubjectCd], 
+      [Department].[ActiveInd] AS [ActiveInd], 
+      [Department].[CreateDt] AS [CreateDt], 
+      [Department].[LastModDt] AS [LastModDt], 
+      [Department].[LastModUser] AS [LastModUser]
+      FROM [dbo].[Department] AS [Department]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DeptContact" EntityType="GenEdDataModel.Store.DeptContact" store:Type="Tables" store:Schema="dbo" store:Name="DeptContact">
+            <DefiningQuery>SELECT 
+      [DeptContact].[AccessNetId] AS [AccessNetId], 
+      [DeptContact].[DeptId] AS [DeptId], 
+      [DeptContact].[dFullNm] AS [dFullNm], 
+      [DeptContact].[dEmail] AS [dEmail], 
+      [DeptContact].[RoleId] AS [RoleId], 
+      [DeptContact].[ActiveInd] AS [ActiveInd], 
+      [DeptContact].[CreateDt] AS [CreateDt], 
+      [DeptContact].[LastModDt] AS [LastModDt], 
+      [DeptContact].[LastModUser] AS [LastModUser]
+      FROM [dbo].[DeptContact] AS [DeptContact]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DocumentType" EntityType="GenEdDataModel.Store.DocumentType" store:Type="Tables" store:Schema="dbo" store:Name="DocumentType">
+            <DefiningQuery>SELECT 
+      [DocumentType].[DocumentTypeId] AS [DocumentTypeId], 
+      [DocumentType].[DocumentName] AS [DocumentName], 
+      [DocumentType].[ActiveInd] AS [ActiveInd]
+      FROM [dbo].[DocumentType] AS [DocumentType]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Package" EntityType="GenEdDataModel.Store.Package" store:Type="Tables" store:Schema="dbo" store:Name="Package">
+            <DefiningQuery>SELECT 
+      [Package].[PackageId] AS [PackageId], 
+      [Package].[AcademicYrCd] AS [AcademicYrCd], 
+      [Package].[Deadline] AS [Deadline], 
+      [Package].[CourseId] AS [CourseId], 
+      [Package].[AreaCd] AS [AreaCd], 
+      [Package].[ActiveInd] AS [ActiveInd], 
+      [Package].[CreateDt] AS [CreateDt], 
+      [Package].[LastModDt] AS [LastModDt], 
+      [Package].[LastModUser] AS [LastModUser], 
+      [Package].[OnProbation] AS [OnProbation]
+      FROM [dbo].[Package] AS [Package]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Portfolio" EntityType="GenEdDataModel.Store.Portfolio" store:Type="Tables" store:Schema="dbo" store:Name="Portfolio">
+            <DefiningQuery>SELECT 
+      [Portfolio].[PortfolioId] AS [PortfolioId], 
+      [Portfolio].[PackageId] AS [PackageId], 
+      [Portfolio].[DeptContactId] AS [DeptContactId], 
+      [Portfolio].[CourseId] AS [CourseId], 
+      [Portfolio].[SubmitDt] AS [SubmitDt], 
+      [Portfolio].[ActiveInd] AS [ActiveInd], 
+      [Portfolio].[CreateDt] AS [CreateDt], 
+      [Portfolio].[LastModDt] AS [LastModDt], 
+      [Portfolio].[LastModUser] AS [LastModUser], 
+      [Portfolio].[CourseStatus] AS [CourseStatus], 
+      [Portfolio].[DeptId] AS [DeptId], 
+      [Portfolio].[PortfolioComments] AS [PortfolioComments], 
+      [Portfolio].[Deadline] AS [Deadline]
+      FROM [dbo].[Portfolio] AS [Portfolio]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Questionnaire" EntityType="GenEdDataModel.Store.Questionnaire" store:Type="Tables" store:Schema="dbo" store:Name="Questionnaire">
+            <DefiningQuery>SELECT 
+      [Questionnaire].[QuestionnaireId] AS [QuestionnaireId], 
+      [Questionnaire].[Answers] AS [Answers], 
+      [Questionnaire].[UserId] AS [UserId], 
+      [Questionnaire].[PortfolioId] AS [PortfolioId]
+      FROM [dbo].[Questionnaire] AS [Questionnaire]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UploadFiles" EntityType="GenEdDataModel.Store.UploadFiles" store:Type="Tables" store:Schema="dbo" store:Name="UploadFiles">
+            <DefiningQuery>SELECT 
+      [UploadFiles].[FileId] AS [FileId], 
+      [UploadFiles].[PortfolioId] AS [PortfolioId], 
+      [UploadFiles].[FileNm] AS [FileNm], 
+      [UploadFiles].[FileType] AS [FileType], 
+      [UploadFiles].[UploadFile] AS [UploadFile], 
+      [UploadFiles].[ActiveInd] AS [ActiveInd], 
+      [UploadFiles].[LastModDt] AS [LastModDt], 
+      [UploadFiles].[LastModUser] AS [LastModUser], 
+      [UploadFiles].[CreateDt] AS [CreateDt], 
+      [UploadFiles].[CreateUserNm] AS [CreateUserNm], 
+      [UploadFiles].[ItemType] AS [ItemType]
+      FROM [dbo].[UploadFiles] AS [UploadFiles]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UserRole" EntityType="GenEdDataModel.Store.UserRole" store:Type="Tables" store:Schema="dbo" store:Name="UserRole">
+            <DefiningQuery>SELECT 
+      [UserRole].[RoleId] AS [RoleId], 
+      [UserRole].[RoleNm] AS [RoleNm], 
+      [UserRole].[ActiveInd] AS [ActiveInd], 
+      [UserRole].[CreateDt] AS [CreateDt], 
+      [UserRole].[LastModDt] AS [LastModDt], 
+      [UserRole].[LastModUser] AS [LastModUser]
+      FROM [dbo].[UserRole] AS [UserRole]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Users" EntityType="GenEdDataModel.Store.Users" store:Type="Tables" store:Schema="dbo" store:Name="Users">
+            <DefiningQuery>SELECT 
+      [Users].[AccessNetId] AS [AccessNetId], 
+      [Users].[RoleId] AS [RoleId], 
+      [Users].[dFullNm] AS [dFullNm], 
+      [Users].[dEmail] AS [dEmail], 
+      [Users].[ActiveInd] AS [ActiveInd], 
+      [Users].[CreateDt] AS [CreateDt], 
+      [Users].[LastModDt] AS [LastModDt], 
+      [Users].[LastModUser] AS [LastModUser]
+      FROM [dbo].[Users] AS [Users]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CIS4396F01.dbo.AcademicYr' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="AcademicYr">
+          <Key>
+            <PropertyRef Name="AcademicYrCd" />
+            <PropertyRef Name="ActiveInd" />
+            <PropertyRef Name="CreaetDt" />
+            <PropertyRef Name="CreateUserNm" />
+          </Key>
+          <Property Name="AcademicYrCd" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="AcademicYrDesc" Type="varchar" MaxLength="255" />
+          <Property Name="ActiveInd" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="CreaetDt" Type="datetime" Nullable="false" />
+          <Property Name="CreateUserNm" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CIS4396F01.dbo.Area' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Area">
+          <Key>
+            <PropertyRef Name="AreaCd" />
+            <PropertyRef Name="AreaNm" />
+            <PropertyRef Name="ActiveInd" />
+          </Key>
+          <Property Name="AreaCd" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="AreaNm" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ActiveInd" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="CreateDt" Type="datetime" />
+          <Property Name="LastModDt" Type="datetime" />
+          <Property Name="LastModUser" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CIS4396F01.dbo.Course' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Course">
+          <Key>
+            <PropertyRef Name="CourseId" />
+            <PropertyRef Name="CourseTitle" />
+            <PropertyRef Name="CourseNum" />
+            <PropertyRef Name="SubjectCd" />
+            <PropertyRef Name="CourseSubjectNum" />
+            <PropertyRef Name="AreaCd" />
+            <PropertyRef Name="ActiveInd" />
+            <PropertyRef Name="CreateUser" />
+          </Key>
+          <Property Name="CourseId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CourseTitle" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CourseNum" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SubjectCd" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CourseSubjectNum" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AreaCd" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="ActiveInd" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="LastModDt" Type="datetime" />
+          <Property Name="LastModUser" Type="varchar" MaxLength="100" />
+          <Property Name="CreateDt" Type="datetime" />
+          <Property Name="CreateUser" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="DeptId" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CIS4396F01.dbo.Department' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DeptId" />
+            <PropertyRef Name="DeptNm" />
+            <PropertyRef Name="ActiveInd" />
+          </Key>
+          <Property Name="DeptId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CollegeId" Type="int" />
+          <Property Name="CollegeCd" Type="varchar" MaxLength="5" />
+          <Property Name="DeptNm" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="SubjectCd" Type="varchar" MaxLength="20" />
+          <Property Name="ActiveInd" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="CreateDt" Type="datetime" />
+          <Property Name="LastModDt" Type="datetime" />
+          <Property Name="LastModUser" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CIS4396F01.dbo.DeptContact' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="DeptContact">
+          <Key>
+            <PropertyRef Name="AccessNetId" />
+            <PropertyRef Name="DeptId" />
+            <PropertyRef Name="ActiveInd" />
+          </Key>
+          <Property Name="AccessNetId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DeptId" Type="int" Nullable="false" />
+          <Property Name="dFullNm" Type="varchar" MaxLength="100" />
+          <Property Name="dEmail" Type="varchar" MaxLength="100" />
+          <Property Name="RoleId" Type="int" />
+          <Property Name="ActiveInd" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="CreateDt" Type="datetime" />
+          <Property Name="LastModDt" Type="datetime" />
+          <Property Name="LastModUser" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CIS4396F01.dbo.DocumentType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="DocumentType">
+          <Key>
+            <PropertyRef Name="DocumentTypeId" />
+          </Key>
+          <Property Name="DocumentTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DocumentName" Type="varchar" MaxLength="50" />
+          <Property Name="ActiveInd" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CIS4396F01.dbo.Package' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Package">
+          <Key>
+            <PropertyRef Name="PackageId" />
+            <PropertyRef Name="AcademicYrCd" />
+            <PropertyRef Name="Deadline" />
+            <PropertyRef Name="CourseId" />
+            <PropertyRef Name="AreaCd" />
+            <PropertyRef Name="ActiveInd" />
+            <PropertyRef Name="CreateDt" />
+            <PropertyRef Name="LastModDt" />
+            <PropertyRef Name="LastModUser" />
+          </Key>
+          <Property Name="PackageId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AcademicYrCd" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Deadline" Type="datetime" Nullable="false" />
+          <Property Name="CourseId" Type="int" Nullable="false" />
+          <Property Name="AreaCd" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="ActiveInd" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="CreateDt" Type="datetime" Nullable="false" />
+          <Property Name="LastModDt" Type="datetime" Nullable="false" />
+          <Property Name="LastModUser" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="OnProbation" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CIS4396F01.dbo.Portfolio' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Portfolio">
+          <Key>
+            <PropertyRef Name="PortfolioId" />
+            <PropertyRef Name="PackageId" />
+            <PropertyRef Name="CourseId" />
+          </Key>
+          <Property Name="PortfolioId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PackageId" Type="int" Nullable="false" />
+          <Property Name="DeptContactId" Type="varchar" MaxLength="50" />
+          <Property Name="CourseId" Type="int" Nullable="false" />
+          <Property Name="SubmitDt" Type="datetime" />
+          <Property Name="ActiveInd" Type="varchar" MaxLength="1" />
+          <Property Name="CreateDt" Type="datetime" />
+          <Property Name="LastModDt" Type="datetime" />
+          <Property Name="LastModUser" Type="varchar" MaxLength="100" />
+          <Property Name="CourseStatus" Type="varchar" MaxLength="10" />
+          <Property Name="DeptId" Type="int" />
+          <Property Name="PortfolioComments" Type="varbinary(max)" />
+          <Property Name="Deadline" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CIS4396F01.dbo.Questionnaire' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Questionnaire">
+          <Key>
+            <PropertyRef Name="QuestionnaireId" />
+            <PropertyRef Name="Answers" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="PortfolioId" />
+          </Key>
+          <Property Name="QuestionnaireId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Answers" Type="varbinary(max)" Nullable="false" />
+          <Property Name="UserId" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="PortfolioId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CIS4396F01.dbo.UploadFiles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="UploadFiles">
+          <Key>
+            <PropertyRef Name="FileId" />
+            <PropertyRef Name="PortfolioId" />
+            <PropertyRef Name="ActiveInd" />
+          </Key>
+          <Property Name="FileId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PortfolioId" Type="int" Nullable="false" />
+          <Property Name="FileNm" Type="varchar" MaxLength="100" />
+          <Property Name="FileType" Type="varchar" MaxLength="150" />
+          <Property Name="UploadFile" Type="varbinary(max)" />
+          <Property Name="ActiveInd" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="LastModDt" Type="datetime" />
+          <Property Name="LastModUser" Type="varchar" MaxLength="100" />
+          <Property Name="CreateDt" Type="datetime" />
+          <Property Name="CreateUserNm" Type="varchar" MaxLength="100" />
+          <Property Name="ItemType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CIS4396F01.dbo.UserRole' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="ActiveInd" />
+          </Key>
+          <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleNm" Type="varchar" MaxLength="100" />
+          <Property Name="ActiveInd" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="CreateDt" Type="datetime" />
+          <Property Name="LastModDt" Type="datetime" />
+          <Property Name="LastModUser" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CIS4396F01.dbo.Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="AccessNetId" />
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="ActiveInd" />
+          </Key>
+          <Property Name="AccessNetId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="dFullNm" Type="varchar" MaxLength="100" />
+          <Property Name="dEmail" Type="varchar" MaxLength="100" />
+          <Property Name="ActiveInd" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="CreateDt" Type="datetime" />
+          <Property Name="LastModDt" Type="datetime" />
+          <Property Name="LastModUser" Type="varchar" MaxLength="100" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GenEdDataModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CIS4396F01Entities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="AcademicYrs" EntityType="GenEdDataModel.AcademicYr" />
+          <EntitySet Name="Areas" EntityType="GenEdDataModel.Area" />
+          <EntitySet Name="Courses" EntityType="GenEdDataModel.Course" />
+          <EntitySet Name="Departments" EntityType="GenEdDataModel.Department" />
+          <EntitySet Name="DeptContacts" EntityType="GenEdDataModel.DeptContact" />
+          <EntitySet Name="DocumentTypes" EntityType="GenEdDataModel.DocumentType" />
+          <EntitySet Name="Packages" EntityType="GenEdDataModel.Package" />
+          <EntitySet Name="Portfolios" EntityType="GenEdDataModel.Portfolio" />
+          <EntitySet Name="Questionnaires" EntityType="GenEdDataModel.Questionnaire" />
+          <EntitySet Name="UploadFiles" EntityType="GenEdDataModel.UploadFile" />
+          <EntitySet Name="UserRoles" EntityType="GenEdDataModel.UserRole" />
+          <EntitySet Name="Users" EntityType="GenEdDataModel.User" />
+        </EntityContainer>
+        <EntityType Name="AcademicYr">
+          <Key>
+            <PropertyRef Name="AcademicYrCd" />
+            <PropertyRef Name="ActiveInd" />
+            <PropertyRef Name="CreaetDt" />
+            <PropertyRef Name="CreateUserNm" />
+          </Key>
+          <Property Name="AcademicYrCd" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="AcademicYrDesc" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ActiveInd" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="CreaetDt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateUserNm" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Area">
+          <Key>
+            <PropertyRef Name="AreaCd" />
+            <PropertyRef Name="AreaNm" />
+            <PropertyRef Name="ActiveInd" />
+          </Key>
+          <Property Name="AreaCd" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="AreaNm" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="ActiveInd" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModUser" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Course">
+          <Key>
+            <PropertyRef Name="CourseId" />
+            <PropertyRef Name="CourseTitle" />
+            <PropertyRef Name="CourseNum" />
+            <PropertyRef Name="SubjectCd" />
+            <PropertyRef Name="CourseSubjectNum" />
+            <PropertyRef Name="AreaCd" />
+            <PropertyRef Name="ActiveInd" />
+            <PropertyRef Name="CreateUser" />
+          </Key>
+          <Property Name="CourseId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CourseTitle" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CourseNum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SubjectCd" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CourseSubjectNum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AreaCd" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActiveInd" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="LastModDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModUser" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDt" Type="DateTime" Precision="3" />
+          <Property Name="CreateUser" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="DeptId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DeptId" />
+            <PropertyRef Name="DeptNm" />
+            <PropertyRef Name="ActiveInd" />
+          </Key>
+          <Property Name="DeptId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CollegeId" Type="Int32" />
+          <Property Name="CollegeCd" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="DeptNm" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="SubjectCd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActiveInd" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModUser" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DeptContact">
+          <Key>
+            <PropertyRef Name="AccessNetId" />
+            <PropertyRef Name="DeptId" />
+            <PropertyRef Name="ActiveInd" />
+          </Key>
+          <Property Name="AccessNetId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DeptId" Type="Int32" Nullable="false" />
+          <Property Name="dFullNm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="dEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="ActiveInd" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModUser" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DocumentType">
+          <Key>
+            <PropertyRef Name="DocumentTypeId" />
+          </Key>
+          <Property Name="DocumentTypeId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="DocumentName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ActiveInd" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Package">
+          <Key>
+            <PropertyRef Name="PackageId" />
+            <PropertyRef Name="AcademicYrCd" />
+            <PropertyRef Name="Deadline" />
+            <PropertyRef Name="CourseId" />
+            <PropertyRef Name="AreaCd" />
+            <PropertyRef Name="ActiveInd" />
+            <PropertyRef Name="CreateDt" />
+            <PropertyRef Name="LastModDt" />
+            <PropertyRef Name="LastModUser" />
+          </Key>
+          <Property Name="PackageId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="AcademicYrCd" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Deadline" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CourseId" Type="Int32" Nullable="false" />
+          <Property Name="AreaCd" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActiveInd" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastModDt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastModUser" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="OnProbation" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Portfolio">
+          <Key>
+            <PropertyRef Name="PortfolioId" />
+            <PropertyRef Name="PackageId" />
+            <PropertyRef Name="CourseId" />
+          </Key>
+          <Property Name="PortfolioId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PackageId" Type="Int32" Nullable="false" />
+          <Property Name="DeptContactId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CourseId" Type="Int32" Nullable="false" />
+          <Property Name="SubmitDt" Type="DateTime" Precision="3" />
+          <Property Name="ActiveInd" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModUser" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CourseStatus" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="DeptId" Type="Int32" />
+          <Property Name="PortfolioComments" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Deadline" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Questionnaire">
+          <Key>
+            <PropertyRef Name="QuestionnaireId" />
+            <PropertyRef Name="Answers" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="PortfolioId" />
+          </Key>
+          <Property Name="QuestionnaireId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Answers" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="PortfolioId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UploadFile">
+          <Key>
+            <PropertyRef Name="FileId" />
+            <PropertyRef Name="PortfolioId" />
+            <PropertyRef Name="ActiveInd" />
+          </Key>
+          <Property Name="FileId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PortfolioId" Type="Int32" Nullable="false" />
+          <Property Name="FileNm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="FileType" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="UploadFile1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ActiveInd" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="LastModDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModUser" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDt" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserNm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ItemType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="ActiveInd" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleNm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ActiveInd" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModUser" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="AccessNetId" />
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="ActiveInd" />
+          </Key>
+          <Property Name="AccessNetId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="dFullNm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="dEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ActiveInd" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModDt" Type="DateTime" Precision="3" />
+          <Property Name="LastModUser" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GenEdDataModelStoreContainer" CdmEntityContainer="CIS4396F01Entities">
+          <EntitySetMapping Name="AcademicYrs">
+            <EntityTypeMapping TypeName="GenEdDataModel.AcademicYr">
+              <MappingFragment StoreEntitySet="AcademicYr">
+                <ScalarProperty Name="AcademicYrCd" ColumnName="AcademicYrCd" />
+                <ScalarProperty Name="AcademicYrDesc" ColumnName="AcademicYrDesc" />
+                <ScalarProperty Name="ActiveInd" ColumnName="ActiveInd" />
+                <ScalarProperty Name="CreaetDt" ColumnName="CreaetDt" />
+                <ScalarProperty Name="CreateUserNm" ColumnName="CreateUserNm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Areas">
+            <EntityTypeMapping TypeName="GenEdDataModel.Area">
+              <MappingFragment StoreEntitySet="Area">
+                <ScalarProperty Name="AreaCd" ColumnName="AreaCd" />
+                <ScalarProperty Name="AreaNm" ColumnName="AreaNm" />
+                <ScalarProperty Name="ActiveInd" ColumnName="ActiveInd" />
+                <ScalarProperty Name="CreateDt" ColumnName="CreateDt" />
+                <ScalarProperty Name="LastModDt" ColumnName="LastModDt" />
+                <ScalarProperty Name="LastModUser" ColumnName="LastModUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Courses">
+            <EntityTypeMapping TypeName="GenEdDataModel.Course">
+              <MappingFragment StoreEntitySet="Course">
+                <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+                <ScalarProperty Name="CourseTitle" ColumnName="CourseTitle" />
+                <ScalarProperty Name="CourseNum" ColumnName="CourseNum" />
+                <ScalarProperty Name="SubjectCd" ColumnName="SubjectCd" />
+                <ScalarProperty Name="CourseSubjectNum" ColumnName="CourseSubjectNum" />
+                <ScalarProperty Name="AreaCd" ColumnName="AreaCd" />
+                <ScalarProperty Name="ActiveInd" ColumnName="ActiveInd" />
+                <ScalarProperty Name="LastModDt" ColumnName="LastModDt" />
+                <ScalarProperty Name="LastModUser" ColumnName="LastModUser" />
+                <ScalarProperty Name="CreateDt" ColumnName="CreateDt" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="GenEdDataModel.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+                <ScalarProperty Name="CollegeId" ColumnName="CollegeId" />
+                <ScalarProperty Name="CollegeCd" ColumnName="CollegeCd" />
+                <ScalarProperty Name="DeptNm" ColumnName="DeptNm" />
+                <ScalarProperty Name="SubjectCd" ColumnName="SubjectCd" />
+                <ScalarProperty Name="ActiveInd" ColumnName="ActiveInd" />
+                <ScalarProperty Name="CreateDt" ColumnName="CreateDt" />
+                <ScalarProperty Name="LastModDt" ColumnName="LastModDt" />
+                <ScalarProperty Name="LastModUser" ColumnName="LastModUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeptContacts">
+            <EntityTypeMapping TypeName="GenEdDataModel.DeptContact">
+              <MappingFragment StoreEntitySet="DeptContact">
+                <ScalarProperty Name="AccessNetId" ColumnName="AccessNetId" />
+                <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+                <ScalarProperty Name="dFullNm" ColumnName="dFullNm" />
+                <ScalarProperty Name="dEmail" ColumnName="dEmail" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="ActiveInd" ColumnName="ActiveInd" />
+                <ScalarProperty Name="CreateDt" ColumnName="CreateDt" />
+                <ScalarProperty Name="LastModDt" ColumnName="LastModDt" />
+                <ScalarProperty Name="LastModUser" ColumnName="LastModUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocumentTypes">
+            <EntityTypeMapping TypeName="GenEdDataModel.DocumentType">
+              <MappingFragment StoreEntitySet="DocumentType">
+                <ScalarProperty Name="DocumentTypeId" ColumnName="DocumentTypeId" />
+                <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+                <ScalarProperty Name="ActiveInd" ColumnName="ActiveInd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Packages">
+            <EntityTypeMapping TypeName="GenEdDataModel.Package">
+              <MappingFragment StoreEntitySet="Package">
+                <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+                <ScalarProperty Name="AcademicYrCd" ColumnName="AcademicYrCd" />
+                <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+                <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+                <ScalarProperty Name="AreaCd" ColumnName="AreaCd" />
+                <ScalarProperty Name="ActiveInd" ColumnName="ActiveInd" />
+                <ScalarProperty Name="CreateDt" ColumnName="CreateDt" />
+                <ScalarProperty Name="LastModDt" ColumnName="LastModDt" />
+                <ScalarProperty Name="LastModUser" ColumnName="LastModUser" />
+                <ScalarProperty Name="OnProbation" ColumnName="OnProbation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Portfolios">
+            <EntityTypeMapping TypeName="GenEdDataModel.Portfolio">
+              <MappingFragment StoreEntitySet="Portfolio">
+                <ScalarProperty Name="PortfolioId" ColumnName="PortfolioId" />
+                <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+                <ScalarProperty Name="DeptContactId" ColumnName="DeptContactId" />
+                <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+                <ScalarProperty Name="SubmitDt" ColumnName="SubmitDt" />
+                <ScalarProperty Name="ActiveInd" ColumnName="ActiveInd" />
+                <ScalarProperty Name="CreateDt" ColumnName="CreateDt" />
+                <ScalarProperty Name="LastModDt" ColumnName="LastModDt" />
+                <ScalarProperty Name="LastModUser" ColumnName="LastModUser" />
+                <ScalarProperty Name="CourseStatus" ColumnName="CourseStatus" />
+                <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+                <ScalarProperty Name="PortfolioComments" ColumnName="PortfolioComments" />
+                <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questionnaires">
+            <EntityTypeMapping TypeName="GenEdDataModel.Questionnaire">
+              <MappingFragment StoreEntitySet="Questionnaire">
+                <ScalarProperty Name="QuestionnaireId" ColumnName="QuestionnaireId" />
+                <ScalarProperty Name="Answers" ColumnName="Answers" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="PortfolioId" ColumnName="PortfolioId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UploadFiles">
+            <EntityTypeMapping TypeName="GenEdDataModel.UploadFile">
+              <MappingFragment StoreEntitySet="UploadFiles">
+                <ScalarProperty Name="FileId" ColumnName="FileId" />
+                <ScalarProperty Name="PortfolioId" ColumnName="PortfolioId" />
+                <ScalarProperty Name="FileNm" ColumnName="FileNm" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="UploadFile1" ColumnName="UploadFile" />
+                <ScalarProperty Name="ActiveInd" ColumnName="ActiveInd" />
+                <ScalarProperty Name="LastModDt" ColumnName="LastModDt" />
+                <ScalarProperty Name="LastModUser" ColumnName="LastModUser" />
+                <ScalarProperty Name="CreateDt" ColumnName="CreateDt" />
+                <ScalarProperty Name="CreateUserNm" ColumnName="CreateUserNm" />
+                <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="GenEdDataModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="RoleNm" ColumnName="RoleNm" />
+                <ScalarProperty Name="ActiveInd" ColumnName="ActiveInd" />
+                <ScalarProperty Name="CreateDt" ColumnName="CreateDt" />
+                <ScalarProperty Name="LastModDt" ColumnName="LastModDt" />
+                <ScalarProperty Name="LastModUser" ColumnName="LastModUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="GenEdDataModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="AccessNetId" ColumnName="AccessNetId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="dFullNm" ColumnName="dFullNm" />
+                <ScalarProperty Name="dEmail" ColumnName="dEmail" />
+                <ScalarProperty Name="ActiveInd" ColumnName="ActiveInd" />
+                <ScalarProperty Name="CreateDt" ColumnName="CreateDt" />
+                <ScalarProperty Name="LastModDt" ColumnName="LastModDt" />
+                <ScalarProperty Name="LastModUser" ColumnName="LastModUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram DiagramId="ae06efd396a2428d8d52347e77dd705a" Name="Diagram1">
+        <EntityTypeShape EntityType="GenEdDataModel.AcademicYr" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenEdDataModel.Area" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenEdDataModel.Course" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenEdDataModel.Department" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenEdDataModel.DeptContact" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenEdDataModel.DocumentType" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenEdDataModel.Package" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenEdDataModel.Portfolio" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenEdDataModel.Questionnaire" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenEdDataModel.UploadFile" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenEdDataModel.UserRole" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenEdDataModel.User" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

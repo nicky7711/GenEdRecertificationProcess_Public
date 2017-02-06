@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="CIS4396Solution.Admin" %>
+
+<!DOCTYPE html>
+
+<head id="Head1" runat="server">
+    <title>Admin</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://www.temple.edu/sites/all/themes/edu/favicon.ico" />
+
+    <!--Bootstrap Core CSS-->
+    <link href="packages/bootstrap.3.3.6/content/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!--Font Awesome-->
+    <link href="packages/bootstrap.3.3.6/content/Content/font-awesome.min.css" rel="stylesheet" />
+
+    <!--Custom CSS-->
+    <link href="packages/bootstrap.3.3.6/content/Content/style.css" rel="stylesheet" />
+
+    <!--Scripts-->
+    <script src="packages/bootstrap.3.3.6/content/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="packages/bootstrap.3.3.6/content/Scripts/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var url = window.location.pathname;
+            var substr = url.split('/');
+            var urlaspx = substr[substr.length - 1];
+            $('.nav').find('.active').removeClass('active');
+            $('.nav li a').each(function () {
+                if (this.href.indexOf(urlaspx) >= 0) {
+                    $(this).parent().addClass('active');
+                    $('.nav').find('.dropdown').removeClass('active');
+                }
+            });
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-image: url(https://fim.temple.edu/idp/images/hex-pattern-bg.png); background-repeat: repeat">
+    <!--Navigation Menu-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="theNavMenu">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" id="theNavbarBrand" href="#">GenEd Recertification</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="AdminHome.aspx">Home</a></li>
+                    <li><a href="AdminCreateCoursePackage.aspx">Create Package</a></li>
+                    <li><a href="AdminCreateCourse.aspx">Courses</a></li>
+                    <li class="dropdown" style="background-color: #a41e35">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manage<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="AdminCreateArea.aspx">Manage Areas</a></li>
+                            <li><a href="AdminCreateDepartment.aspx">Manage Departments</a></li>
+                            <li><a href="AdminCreatePortfolioDocument.aspx">Manage Documents</a></li>
+                            <li><a href="AdminCreateUser.aspx">Manage Users</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- TODO: Implement dynamic welcome message for admins -->
+                    <li><a href="Login.aspx"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
